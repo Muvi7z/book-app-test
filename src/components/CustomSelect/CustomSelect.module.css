@@ -1,0 +1,16 @@
+.select {
+	width: 360px;
+	outline: none;
+}
+
+@media (max-width: 1920px) {
+	.select {
+		width: 260px;
+	}
+}
+
+@media (max-width: 320px) {
+	.select {
+		width: 200px;
+	}
+}

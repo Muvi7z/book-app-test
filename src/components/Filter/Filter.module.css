@@ -1,0 +1,33 @@
+.filter {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: center;
+	gap: 20px 50px;
+	color: black;
+}
+
+.label {
+	color: white;
+	font-size: 16px;
+	margin-right: 8px;
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 744px) {
+	.filter {
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
+}
+
+@media (max-width: 392px) {
+	.wrapper {
+		flex-direction: column;
+	}
+}

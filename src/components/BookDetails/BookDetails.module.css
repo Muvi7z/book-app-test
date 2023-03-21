@@ -1,0 +1,64 @@
+.error {
+	color: red;
+}
+
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 40px;
+	width: 100%;
+}
+
+.cover {
+	background-color: rgba(173, 173, 173, 0.7);
+	width: 100%;
+	padding: 20px;
+	display: grid;
+	justify-items: center;
+	align-content: center;
+}
+
+.image {
+	width: 390px;
+	box-shadow: 12px 12px 12px 0px rgba(0, 0, 0, 0.4);
+}
+
+.desc {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.body {
+	padding: 1rem;
+}
+
+.body hr {
+	margin: 18px 0;
+}
+
+@media (max-width: 1260px) {
+	.wrapper {
+		gap: 20px;
+		grid-template-columns: minmax(450px, auto) 1fr;
+	}
+}
+
+@media (max-width: 1080px) {
+	.wrapper {
+		gap: 20px;
+		grid-template-columns: 1fr;
+	}
+
+}
+
+@media (max-width: 450px) {
+	.cover {
+		padding: 0;
+	}
+
+	.image {
+		width: 100vw;
+	}
+}

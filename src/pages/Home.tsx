@@ -1,8 +1,11 @@
 import React from 'react'
+import BookList from '../components/BookList/BookList'
 
 const Home = () => {
 	return (
-		<div>Home</div>
+		<div className='container'>
+			<BookList />
+		</div>
 	)
 }
 

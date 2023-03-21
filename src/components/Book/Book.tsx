@@ -15,7 +15,7 @@ const Book: React.FC<BookProps> = ({ book }) => {
 				<div className={style.body}>
 					<div className={style.category}>{volumeInfo.categories && volumeInfo.categories[0]}</div>
 					<h3>{volumeInfo.title}</h3>
-					<div>{volumeInfo.authors ? volumeInfo.authors : volumeInfo.publisher} · {volumeInfo.publishedDate}</div>
+					<div>{volumeInfo.authors ? volumeInfo.authors[0] : volumeInfo.publisher} · {volumeInfo.publishedDate}</div>
 				</div>
 			</div>
 		</Link >

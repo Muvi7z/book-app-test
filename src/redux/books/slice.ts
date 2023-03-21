@@ -11,18 +11,17 @@ const initialState: BooksSliceState = {
 	error: null,
 }
 
+
 export const loadBooks = createAsyncThunk<LoadBooksReturn, LoadBooksArgs, { rejectValue: string }>(
 	'@@books/load-books',
 	async (params, { rejectWithValue }) => {
 		const { maxResults, search, category, sort } = params
-
 		const res = await axios.get<LoadBooksReturn>(
 			`${API}?q=${search}${category}${sort}&maxResults=${maxResults}&key=${API_KEY}`,
 		);
 		if (res.status !== 200)
 			return rejectWithValue('Server error!')
 		return res.data;
-
 	}
 )
 export const loadMoreBooks = createAsyncThunk<LoadBooksReturn, LoadBooksArgs, { rejectValue: string }>(
@@ -73,7 +72,7 @@ const booksSlice = createSlice({
 			})
 			.addMatcher(isError, (state, action: PayloadAction<string>) => {
 				state.status = Status.ERROR
-				state.error = action.payload || 'Error'; //|| action.error.message 
+				state.error = action.payload || 'Error, Not Found'; //|| action.error.message 
 			})
 	},
 })
